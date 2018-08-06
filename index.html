@@ -6,21 +6,27 @@
     <title>DVB-C</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
     <header>
         AXIOMA DVB-C DATA FOR FINE TUNING
     </header>
     <main>
+                
             <div class="info">
-                    FEC - 6875, QAM - 128                   
+                   <div>FEC - 6875, QAM - 128</div> 
+                    <div><button id="btnC">COLLAPSE ALL</button>
+                        <button id="btnE">EXPAND ALL</button>
+                </div> 
+                                    
             </div>
        
-            <div class="trans">
-                <div class="header">274000 KGz</div>
-                <div class ="content">
-                        <div>DTX</div>
+            <div  class="trans">
+                <div id="ch" class="header">274000 KGz</div>
+                <div   class ="content">
+                        <div >DTX</div>
                         <div>MTV Dance</div>
                         <div>MTV Rock</div>
                         <div>Домашние животные</div>
@@ -30,11 +36,11 @@
                         <div>Ля-минор ТВ</div>
                         <div>Моя Планета</div>
                         <div>Наше Новое Кино</div>
-                        <div>Совершенно секретно</div>
+                        <div>Совершенно секретно</div>                       
                 </div>
             </div>
             <div class="trans">
-                    <div class="header">282000 KGz</div>
+                    <div id="ch" class="header">282000 KGz</div>
                     <div class ="content">
                             <div>Кто есть кто</div>
                             <div>BRIDGE TV Русский Хит</div>
