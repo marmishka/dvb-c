@@ -32,7 +32,18 @@
        width:80%;       
        flex-wrap:wrap;
    }
-   
+   .info{
+       display:block;
+       font-family: 'Righteous',sans-serif;
+       width:55%;
+       font-size:20px;
+       box-shadow: 2px 2px 10px #000;
+       background:rgb(149, 216, 216);
+       margin: 5px;
+       border-radius: 20px;
+       padding:5px;
+      
+}
    .trans{
        display:block;
        margin: 5px;
@@ -43,6 +54,7 @@
        background:rgb(149, 216, 216); 
        
    }
+   
    .trans .header{
        background:rgb(149, 216, 216);       
        width:100%;
