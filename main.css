@@ -30,11 +30,13 @@
    main{
       
        display:flex;
-       flex-direction:row;
+       flex-direction:column;
        justify-content:center;
+       align-items:center;
        margin:80px auto;
-       width:80%;       
+       width:100%;       
        flex-wrap:wrap;
+       margin-bottom: 10px;
    }
    .info{
        display:block;
