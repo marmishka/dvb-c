@@ -38,6 +38,12 @@
        flex-wrap:wrap;
        margin-bottom: 10px;
    }
+   #info{
+       text-align: center;
+       padding:5px;
+      border-bottom:1px solid;
+      
+   }
    .info{
        display:block;
        font-family: 'Righteous',sans-serif;
@@ -52,6 +58,9 @@
 }
 .info div,button{
     background:inherit;
+}
+#but{
+    padding-top:5px;
 }
 
  .trans{
