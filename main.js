@@ -7,7 +7,7 @@ $.getJSON("main.json",function(data){
     $("main").append("<div class=\"info\">"+
                      "<div id=\"info\">FEC - "+data[1].id+",  QAM - "+data[1].ch+"</div>"+          
                      "</div>");
-    $("footer").append("Created by Zmichgen 2018");                 
+    $("footer").append("Created by zdev.by 2018");                 
     var k="";
     var nu =":hidden"
     for ( var i in data){
