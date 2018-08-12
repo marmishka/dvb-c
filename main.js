@@ -35,15 +35,18 @@ $.getJSON("main.json",function(data){
     $("#found").click(function(){
         var freq="";
         var channel=document.getElementById("tt").value;
-        if (channel==""){freq="Be careful, Enter Channel Name"}
+        if (channel==""){freq="Be careful, Enter Channel Name";
+                          document.getElementById("ttt").value =freq;}
         else{ 
             for (var i=2;i<data.length;i++){
-                if (channel===data[i].ch){freq=data[i].id;}
+                if (channel===data[i].ch){freq=data[i].id+"000 KGz";
+                document.getElementById("ttt").value =freq;
+                $("#a"+freq).slideDown();
+            }
             }
 
         }
-        document.getElementById("ttt").value =freq+"000 KGz";
-        $("#a"+freq).slideDown();
+        
    });
    $("#clear").click(function(){
     document.getElementById("tt").value ="";
