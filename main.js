@@ -9,7 +9,7 @@ $.getJSON("main.json",function(data){
                      "</div>");
     $("footer").append("Created by Zmichgen 2018");                 
     var k="";
-   
+    var nu =":hidden"
     for ( var i in data){
         if (i>1){
         var n=data[i].id;
@@ -18,7 +18,7 @@ $.getJSON("main.json",function(data){
           $("main").append("<div class=\"trans\"> <div id=\""+n+"\" class=\"header\">"+n+"000 KGz"+"</div><div id=\"a"+n+"\" class=\"content\"></div></div>");
      };       
         var chan = data[i].ch;      
-            $("#a"+n).append("<div>"+chan+"</div>");    
+            $("#a"+n).append("<div id = \""+i+"\">"+chan+"</div>");    
          
     }};
     $(".content").slideUp();
@@ -26,7 +26,14 @@ $.getJSON("main.json",function(data){
         $("#a"+this.id).slideToggle();
     });
     $(".info").click(function(){
-        $(".content").slideToggle();
+        
+        $(".content"+nu).slideToggle();
+        if (nu===":hidden"){nu=":visible";}
+        else
+        {nu=":hidden";}
+    });
+    $(".content div").click(function(){
+         $(this).html("Changed");
     });
    });  
  
