@@ -139,10 +139,15 @@ h3{
     box-shadow: 0 0 10px;
     border-radius: 10px;
 }
+
 h3:hover{
     box-shadow: 0 0 50px; 
 }
-   
+select{
+    width:100%;
+    background: white;
+}
+ 
    footer{
        color:white;
        font-family: 'Days One', Times, serif;
@@ -176,7 +181,7 @@ h3:hover{
        font-size:1em;
    }
    #ch-list{
-       font-size:2em;
+       font-size:1em;
    }
    @media screen and (max-width:720px){
        main{

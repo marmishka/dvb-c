@@ -5,8 +5,8 @@
 $.getJSON("main.json",function(data){
   
     $("header").append(data[0].id+"<img src=\""+data[0].ch+"\" width=\"100px\"/>");
-    $("main").append("<form><input id=\"tt\" name=\"ch-list\" list=\"ch-list\" placeholder=\"Enter Channel Name\"/ requared>"+
-    "<datalist id=\"ch-list\"></datalist><h3 id =\"found\">FOUND</h3><h3 id =\"clear\">CLEAR</h3><input id=\"ttt\" type=\"text\" value=\"Frequency will be here\" disabled></input><h3 id =\"close\">CLOSE</h3></form>");
+    $("main").append("<form><select id=\"ch-list\" placeholder=\"Enter Channel Name\"></select>"+
+    "<h3 id =\"found\">FOUND</h3><input id=\"ttt\" type=\"text\" disabled></input><h3 id =\"close\">CLOSE</h3></form>");
     $("main").append("<div class=\"info\">"+
                      "<div id=\"info\">FEC - "+data[1].id+",  QAM - "+data[1].ch+"</div>"+          
                      "</div>");
@@ -27,8 +27,9 @@ $.getJSON("main.json",function(data){
          
     }};
     lch.sort();
+   
     $(lch).each( function(index, item) {
-        var option = $('<option style=\"font-size:1.5em;\" value="'+item+'"></option>');
+        var option = $('<option  value="'+item+'">'+item+'</option>');
         $('#ch-list').append(option);
     });
     $(".content").slideUp();
@@ -36,20 +37,14 @@ $.getJSON("main.json",function(data){
         var freq="";
         var end ="";
         var key ="";
-        var channel=document.getElementById("tt").value;
-        if (channel==""){freq="Be careful, Enter Channel Name";
-                             end="";
-                             
-                            }
-                          
-        else{ 
+        var channel=document.getElementById("ch-list").value;
             for (var i=2;i<data.length;i++){
                 if (channel===data[i].ch){freq=data[i].id; 
                                            end="000 KGz"; 
                                            key="#a"+freq;                
             }
            
-            }
+            
             
         }
         document.getElementById("ttt").value =freq+end;
@@ -64,6 +59,7 @@ $.getJSON("main.json",function(data){
         $("form").slideUp();
    });
    
+  
   
    $("header").click(function(){
          $("form").slideDown();
