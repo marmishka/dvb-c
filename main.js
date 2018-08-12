@@ -32,9 +32,7 @@ $.getJSON("main.json",function(data){
         else
         {nu=":hidden";}
     });
-    $(".content div").click(function(){
-         $(this).html("Changed");
-    });
+   
    });  
  
 
