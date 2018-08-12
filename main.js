@@ -34,18 +34,26 @@ $.getJSON("main.json",function(data){
     $(".content").slideUp();
     $("#found").click(function(){
         var freq="";
+        var end ="";
+        var key ="";
         var channel=document.getElementById("tt").value;
         if (channel==""){freq="Be careful, Enter Channel Name";
-                          document.getElementById("ttt").value =freq;}
+                             end="";
+                             
+                            }
+                          
         else{ 
             for (var i=2;i<data.length;i++){
-                if (channel===data[i].ch){freq=data[i].id+"000 KGz";
-                document.getElementById("ttt").value =freq;
-                $("#a"+freq).slideDown();
+                if (channel===data[i].ch){freq=data[i].id; 
+                                           end="000 KGz"; 
+                                           key="#a"+freq;                
             }
+           
             }
-
+            
         }
+        document.getElementById("ttt").value =freq+end;
+            $(key).slideDown();
         
    });
    $("#clear").click(function(){
