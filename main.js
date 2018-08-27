@@ -6,7 +6,7 @@ $.getJSON("main.json",function(data){
   
     $("header").append(data[0].id+"<img src=\""+data[0].ch+"\" width=\"100px\"/>");
     $("main").append("<form><select id=\"ch-list\" placeholder=\"Enter Channel Name\"></select>"+
-    "<h3 id =\"found\">FOUND</h3><input id=\"ttt\" type=\"text\" disabled></input><h3 id =\"close\">CLOSE</h3></form>");
+    "<h3 id =\"search\">SEARCH</h3><input id=\"ttt\" type=\"text\" disabled></input><h3 id =\"close\">CLOSE</h3></form>");
     $("main").append("<div class=\"info\">"+
                      "<div id=\"info\">FEC - "+data[1].id+",  QAM - "+data[1].ch+"</div>"+          
                      "</div>");
@@ -33,7 +33,7 @@ $.getJSON("main.json",function(data){
         $('#ch-list').append(option);
     });
     $(".content").slideUp();
-    $("#found").click(function(){
+    $("#search").click(function(){
         var freq="";
         var end ="";
         var key ="";
